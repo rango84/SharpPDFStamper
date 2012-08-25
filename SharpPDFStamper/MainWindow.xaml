@@ -1,0 +1,13 @@
+﻿<Window x:Class="SharpPDFStamper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="818">
+    <Grid>
+        <TextBox Height="31" HorizontalAlignment="Left" Margin="24,13,0,0" Name="txtFile" VerticalAlignment="Top" Width="625" />
+        <Button Content="Browse..." Height="31" HorizontalAlignment="Left" Margin="670,13,0,0" Name="btnBrowse" VerticalAlignment="Top" Width="103" Click="btnBrowse_Click" />
+        <ListBox Height="210" HorizontalAlignment="Left" Margin="24,81,0,0" Name="lstResult" VerticalAlignment="Top" Width="625" />
+        <Button Content="Create Template" Height="31" HorizontalAlignment="Left" Margin="670,81,0,0" Name="btnCreateTemplate" VerticalAlignment="Top" Width="103" Click="btnCreateTemplate_Click" />
+        <Label Content="Fields Found in the PDF" Height="28" HorizontalAlignment="Left" Margin="24,50,0,0" Name="lblFieldsFound" VerticalAlignment="Top" Width="152" />
+        <Button Content="Load And Stamp" Height="31" HorizontalAlignment="Left" Margin="670,129,0,0" Name="btnLoad" VerticalAlignment="Top" Width="103" Click="btnLoad_Click" />
+    </Grid>
+</Window>

@@ -1,0 +1,12 @@
+*.com
+*.dll
+*.exe
+*.rar
+
+bin
+obj
+Debug
+Release
+
+/*/Debug
+*.suo
