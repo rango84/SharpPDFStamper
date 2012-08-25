@@ -1,0 +1,5 @@
+Sharp PDFStamper
+
+-Quick way of stamping a pdf with editable fields.  
+-Selects editable fields and creates a template which can be edited with notepad.
+-Creates a newly stamped pdf with the template data

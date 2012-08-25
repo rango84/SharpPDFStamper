@@ -66,6 +66,8 @@ namespace SharpPDFStamper
                 return m_Stream;
             }
         }
+
+   
         public void  Dispose()
         {
             if (m_Stream != null)

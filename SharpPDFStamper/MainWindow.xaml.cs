@@ -70,7 +70,10 @@ namespace SharpPDFStamper
                     {
                         Sb.AppendLine(String.Format("{0}=", field));
                     }
-                    NewFile = String.Format("{0}-{1}.ptmpl", Stamper.FileName, DateTime.Now.Ticks);
+                    if (!Directory.Exists(Config.TemplatesDIR))
+                        Directory.CreateDirectory(Config.TemplatesDIR);
+
+                    NewFile = String.Format("{0}/{1}-{2}.ptmpl",Config.TemplatesDIR, Stamper.FileName, DateTime.Now.Ticks);
                     using (StreamWriter sw = new StreamWriter(NewFile))
                     {
                         sw.Write(Sb.ToString());
@@ -95,7 +98,7 @@ namespace SharpPDFStamper
             {
                 if (result == true)
                 {
-                    using (StreamReader Sr = new StreamReader(Dlg.SafeFileName))
+                    using (StreamReader Sr = new StreamReader(Dlg.FileName))
                     {
                         Dictionary<string, string> Items = new Dictionary<string, string>();
                         ReadTemplate(Sr, Items);

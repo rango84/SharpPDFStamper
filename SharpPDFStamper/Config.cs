@@ -6,15 +6,15 @@ using System.Configuration;
 
 namespace SharpPDFStamper
 {
-    public static class Config
+    public class Config
     {
-        //CONFIG KEYS
-        public static string TemplateFile { get { return ReadConfig("TemplateFile"); } }
-        public static string TemplateExtension { get { return ReadConfig("TemplateExtension"); } }
+        //Leaving this for later
+
+        public static string PDFDIR { get { return ReadConfig("PDFDIR"); } }
+        public static string TemplatesDIR { get { return ReadConfig("TemplatesDIR"); } }
         private static string ReadConfig(string Key)
         {
-            string Value = ConfigurationManager.AppSettings[Key];
-            return Value;
+            return ConfigurationManager.AppSettings[Key];
         }
 
     }
